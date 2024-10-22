@@ -16,7 +16,7 @@ In the below table, the columns indicate the following attributes related to the
 ## Attributes Description
 
 - **ID**: Identity column for individual challenge.
-- **Challenges**: Link to the SQL questions hosted on HackerRank.
+- **Challenges**: Link to the SQL questions hosted on [HackerRank](https://www.hackerrank.com/domains/sql).
 - **Difficulty**: Difficulty level of the SQL challenge.
 - **Solution Script**: Link to the solution SQL script hosted in this repository.
 
