@@ -67,6 +67,10 @@ In the below table, the columns indicate the following attributes related to the
 
 # Reference 
 
+- [Intant SQL Formatter](http://www.dpriver.com/pp/sqlformat.htm)
+
+# Contributing
+
 Contributions are always welcome !!
 
 If you would like to contribute to the project, please fork the repository and make a pull request.
@@ -74,7 +78,7 @@ If you would like to contribute to the project, please fork the repository and m
 
 # Support 
 
-If you have any doubts, queries or, suggestions then, please connect with me on LinkedIn.
+If you have any doubts, queries or, suggestions then, please connect with me on [LinkedIn](https://www.linkedin.com/in/kishan-soni0705/).
 
 Do ⭐ the repository, if it inspired you, gave you ideas of your own or helped you in any way !!
 
