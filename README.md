@@ -1,1 +1,0 @@
-# Kishan's-SQL-Portfolio
