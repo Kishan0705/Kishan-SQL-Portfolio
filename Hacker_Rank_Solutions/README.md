@@ -1,5 +1,33 @@
 [![HackerRank](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/d76c461dead9918c43ccd6bb73074cf9b9f79762/Hacker_Rank_Solutions/assets/Hacker%20Rank%20PNG.png?raw=true)](https://www.hackerrank.com/profile/kishan070503)
 
+# Description 
+
+This repository includes solutions for all [HackerRank SQL Challenges](https://www.hackerrank.com/domains/sql), from Easy to Hard, executed in a MySQL environment. Explore the challenges to enhance your SQL skills!
+
+# Solution Table
+
+In the below table, the columns indicate the following attributes related to the weekly challenge:
+
+
+| ID | Challenges | Difficulty | Solution Script |
+|----|------------|------------|------------------|
+|    |            |            |                  |
+
+## Attributes Description
+
+- **ID**: Identity column for individual challenge.
+- **Challenges**: Link to the SQL questions hosted on HackerRank.
+- **Difficulty**: Difficulty level of the SQL challenge.
+- **Solution Script**: Link to the solution SQL script hosted in this repository.
+
+# Table of Contents
+
+- [Basic Select](https://github.com/Kishan0705/Kishan-SQL-Portfolio/edit/main/Hacker_Rank_Solutions/README.md#1-basic-select)
+
+
+
+
+# Subdomains
 
 ## 1. Basic Select
 
@@ -25,4 +53,37 @@
 | 18  | [Higher Than 75 Marks](https://www.hackerrank.com/challenges/more-than-75-marks/problem?isFullScreen=true) | 🟢 Easy     | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/5d0158cfd8965fd678127b27cbf6c9c33c99898a/Hacker_Rank_Solutions/01%20-%20Basic%20Select/18%20-%20Higher%20Than%2075%20Marks.md) |
 | 19  | [Employee Names](https://www.hackerrank.com/challenges/name-of-employees/problem?isFullScreen=true) | 🟢 Easy     | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/5d0158cfd8965fd678127b27cbf6c9c33c99898a/Hacker_Rank_Solutions/01%20-%20Basic%20Select/19%20-%20Employee%20Names.md) |
 | 20  | [Employee Salaries](https://www.hackerrank.com/challenges/salary-of-employees/problem?isFullScreen=true) | 🟢 Easy     | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/5d0158cfd8965fd678127b27cbf6c9c33c99898a/Hacker_Rank_Solutions/01%20-%20Basic%20Select/20%20-%20%20Employee%20Salaries.md) |
+
+## Advanced Select 
+
+## Aggregation 
+
+## Basic Join 
+
+## Advanced Join 
+
+## Alternstive Queries 
+
+
+# Reference 
+
+Contributions are always welcome !!
+
+If you would like to contribute to the project, please fork the repository and make a pull request.
+
+
+# Support 
+
+If you have any doubts, queries or, suggestions then, please connect with me on LinkedIn.
+
+Do ⭐ the repository, if it inspired you, gave you ideas of your own or helped you in any way !!
+
+
+
+
+
+
+
+
+
 
