@@ -22,7 +22,7 @@ In the below table, the columns indicate the following attributes related to the
 
 # Table of Contents
 
-- [Basic Select]()
+- [Basic Select](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/Hacker_Rank_Solutions/README.md#1-basic-select)
 
 
 
