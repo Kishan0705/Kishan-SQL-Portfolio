@@ -54,7 +54,7 @@ In the below table, the columns indicate the following attributes related to the
 | 19  | [Employee Names](https://www.hackerrank.com/challenges/name-of-employees/problem?isFullScreen=true) | 🟢 Easy     | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/5d0158cfd8965fd678127b27cbf6c9c33c99898a/Hacker_Rank_Solutions/01%20-%20Basic%20Select/19%20-%20Employee%20Names.md) |
 | 20  | [Employee Salaries](https://www.hackerrank.com/challenges/salary-of-employees/problem?isFullScreen=true) | 🟢 Easy     | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/5d0158cfd8965fd678127b27cbf6c9c33c99898a/Hacker_Rank_Solutions/01%20-%20Basic%20Select/20%20-%20%20Employee%20Salaries.md) |
 
-## Advanced Select 
+## 2. Advanced Select 
 
 | ID  | Challenges                                | Difficulty | Solutions                                                                                                                         |
 | --- | ----------------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------- |
