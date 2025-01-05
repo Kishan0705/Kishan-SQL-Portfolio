@@ -8,8 +8,8 @@ A  collection of solved SQL queries focused on subqueries, categorized by subque
 - [Subqueries in the **WHERE** Clause](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/The-Subquery-Collection/README.md#subqueries-in-the-where-clause)
 - [Subqueries in the **FROM** Clause](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/The-Subquery-Collection/README.md#subqueries-in-the-from-clause)
 - Subqueries in the **SELECT** Clause
-- **Correlated Subqueries**
-- Usage of **NOT EXISTS** and **NOT IN**
+- [**Correlated Subqueries**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/The-Subquery-Collection/README.md#correlated-subqueries)
+- [Usage of **NOT EXISTS** and **NOT IN**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/The-Subquery-Collection/README.md#usage-of-not-exists-and-not-in)
 - Miscellaneous **Subquery Use Cases**
 
 
