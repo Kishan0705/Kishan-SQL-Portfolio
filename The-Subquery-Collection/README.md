@@ -10,6 +10,7 @@ A  collection of solved SQL queries focused on subqueries, categorized by subque
 - Subqueries in the **SELECT** Clause
 - [**Correlated Subqueries**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/The-Subquery-Collection/README.md#correlated-subqueries)
 - [Usage of **NOT EXISTS** and **NOT IN**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/The-Subquery-Collection/README.md#usage-of-not-exists-and-not-in)
+- [Subqueries in SQL Commands - INSERT, UPDATE & DELETE]
 
 
 ## Subqueries in the WHERE Clause
