@@ -5,7 +5,7 @@ A  collection of solved SQL queries focused on subqueries, categorized by subque
 
 ### 📍 Table of Contents
 
-- [Subqueries in the **WHERE** Clause](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/The-Subquery-Collection/README.md#subqueries-in-the-where-clause)
+- [Subqueries in the **WHERE** Clause](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/The-Subquery-Collection/Subqueries%20in%20the%20WHERE%20Clause.md#subqueries-in-the-where-clause)
 - [Subqueries in the **FROM** Clause](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/The-Subquery-Collection/README.md#subqueries-in-the-from-clause)
 - Subqueries in the **SELECT** Clause
 - [**Correlated Subqueries**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/The-Subquery-Collection/README.md#correlated-subqueries)
