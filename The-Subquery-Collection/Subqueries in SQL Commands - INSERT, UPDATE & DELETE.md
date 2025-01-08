@@ -101,6 +101,25 @@ and e.emp_id in ( select emp_id from employee_history );
 
 ```
 
+🟡 [ UPDATE ] 
+
+- **Update the employee table to give a 20% salary increment to employees whose current salary is below the average salary of their department. Only update employees who are listed in the employee_history table.**
+
+```sql
+
+UPDATE employee e
+SET salary = salary + (salary * 0.20)
+WHERE salary < (
+    SELECT AVG(e1.salary)
+    FROM employee e1
+    WHERE e1.dept_name = e.dept_name
+)
+AND emp_id IN (
+    SELECT emp_id
+    FROM employee_history
+);
+
+```
 
 
 
