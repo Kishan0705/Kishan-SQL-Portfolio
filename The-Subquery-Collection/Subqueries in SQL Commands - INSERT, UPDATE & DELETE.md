@@ -47,3 +47,69 @@ WHERE
 
 ```
 
+
+🟡 [ UPDATE ] 
+
+- **Update the employee table to increase the salary of all employees working in the "IT" department by 15%. Only update employees who are in the employee_history table.**
+
+```sql
+
+UPDATE employee e
+SET salary = salary + (salary * 0.15)
+WHERE dept_name = 'IT'
+AND emp_id IN (
+    SELECT eh.emp_id
+    FROM employee_history eh
+    WHERE eh.dept_name = 'IT'
+);
+
+```
+
+🟡 [ UPDATE ] 
+
+- **Update the employee table to set each employee's salary to the maximum salary of their department. Only consider employees who are also in the employee_history table.**
+
+```sql
+
+UPDATE employee e
+SET salary = (
+    SELECT MAX(eh.salary)
+    FROM employee_history eh
+    WHERE eh.dept_name = e.dept_name
+)
+WHERE emp_id IN (
+    SELECT emp_id
+    FROM employee_history
+);
+
+```
+
+🟡 [ UPDATE ] 
+
+- **Give 10% Increment to All employees in Banglore Location based on the MAXIMUM salary earned by an employee in each dept. Only Consider employees in employee_history Table.**
+
+```sql
+
+UPDATE employee e 
+set salary = ( select max(salary) + max(salary) * 0.1 ) as 
+	             from employee_history eh 
+	              where eh.dept_name = e.dept_name) 
+where e.dept_name in ( select dept_name 
+	                     from department 
+	                     where location = 'Banglore' ) 
+and e.emp_id in ( select emp_id from employee_history );
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
