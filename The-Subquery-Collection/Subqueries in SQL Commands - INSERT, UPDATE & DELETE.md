@@ -151,6 +151,25 @@ WHERE
 
 ```
 
+🟡 [ UPDATE ] 
+
+- **Update the employee table to set the salary of employees to 10% less than the maximum salary of their department. Only update employees who are currently earning above the average salary of their department.**
+
+```sql
+UPDATE employee e
+SET salary = (
+    SELECT MAX(e1.salary) * 0.90
+    FROM employee e1
+    WHERE e1.dept_name = e.dept_name
+)
+WHERE salary > (
+    SELECT AVG(e1.salary)
+    FROM employee e1
+    WHERE e1.dept_name = e.dept_name
+);
+
+```
+
 
 
 
