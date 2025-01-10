@@ -90,14 +90,21 @@ WHERE emp_id IN (
 
 ```sql
 
-UPDATE employee e 
-set salary = ( select max(salary) + max(salary) * 0.1 ) as 
-	             from employee_history eh 
-	              where eh.dept_name = e.dept_name) 
-where e.dept_name in ( select dept_name 
-	                     from department 
-	                     where location = 'Banglore' ) 
-and e.emp_id in ( select emp_id from employee_history );
+UPDATE employee e
+SET salary = (
+    SELECT MAX(eh.salary) + MAX(eh.salary) * 0.1
+    FROM employee_history eh
+    WHERE eh.dept_name = e.dept_name
+)
+WHERE e.dept_name IN (
+    SELECT d.dept_name
+    FROM department d
+    WHERE d.location = 'Banglore'
+)
+AND e.emp_id IN (
+    SELECT eh.emp_id
+    FROM employee_history eh
+);
 
 ```
 
