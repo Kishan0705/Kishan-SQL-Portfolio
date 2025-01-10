@@ -177,6 +177,33 @@ WHERE salary > (
 
 ```
 
+🟡 [ UPDATE ] 
+
+- **Update the salaries of employees such that all employees earning below the average salary of their department get a 15% increment. Consider only employees who have been with the company for more than 5 years (use the employee_history table to determine tenure).** 
+
+- Tables:
+
+**employee: (emp_id, emp_name, dept_name, salary)**
+
+**employee_history: (emp_id, emp_name, dept_name, salary, hire_date)**
+
+```sql
+
+UPDATE employee e
+SET salary = salary + (salary * 0.15)
+WHERE salary < (
+    SELECT AVG(e1.salary)
+    FROM employee e1
+    WHERE e1.dept_name = e.dept_name
+)
+AND emp_id IN (
+    SELECT eh.emp_id
+    FROM employee_history eh
+    WHERE eh.hire_date <= CURRENT_DATE - INTERVAL '5 years'
+);
+
+```
+
 
 
 
