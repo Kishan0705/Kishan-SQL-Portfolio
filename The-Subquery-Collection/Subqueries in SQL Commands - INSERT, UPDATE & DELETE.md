@@ -121,6 +121,37 @@ AND emp_id IN (
 
 ```
 
+🟢 [ INSERT ] 
+
+- **Insert all employees who are not in the promotions table. or each inserted employee, include their emp_id, emp_name, and the maximum salary of their department as their promotion salary.**
+
+- Tables:
+  
+**employee: (emp_id, emp_name, dept_name, salary)**
+
+**promotions: (emp_id, emp_name, promotion_salary)**
+
+```sql
+
+INSERT INTO promotions (emp_id, emp_name, promotion_salary)
+SELECT 
+    e.emp_id, e.emp_name, (
+        SELECT MAX(e1.salary)
+        FROM employee e1
+        WHERE e1.dept_name = e.dept_name
+    ) AS promotion_salary
+FROM 
+    employee e
+WHERE 
+    NOT EXISTS (
+        SELECT 1 
+        FROM promotions p 
+        WHERE p.emp_id = e.emp_id
+    );
+
+```
+
+
 
 
 
