@@ -229,6 +229,38 @@ AND NOT EXISTS (
 
 ```
 
+🟢 [ INSERT ] 
+
+- **Insert all employees who have been in the company for more than 5 years and earn above the average salary of their department into the high_earners table. The high_earners table should contain the employee's ID, name, and current salary. Ensure no duplicate entries are added to the high_earners table.**
+
+- Tables :
+
+**employee: (emp_id, emp_name, dept_name, salary)**
+
+**employee_history: (emp_id, emp_name, dept_name, hire_date)**
+
+**high_earners: (emp_id, emp_name, salary)**
+
+```sql
+
+INSERT INTO high_earners (emp_id, emp_name, salary)
+SELECT 
+    e.emp_id, e.emp_name, e.salary
+FROM employee e
+JOIN employee_history eh ON e.emp_id = eh.emp_id
+WHERE eh.hire_date <= CURRENT_DATE - INTERVAL '5 years' 
+AND e.salary > (
+    SELECT AVG(e1.salary)
+    FROM employee e1
+    WHERE e1.dept_name = e.dept_name 
+)
+AND NOT EXISTS (
+    SELECT 1 
+    FROM high_earners he
+    WHERE he.emp_id = e.emp_id 
+);
+
+```
 
 
 
