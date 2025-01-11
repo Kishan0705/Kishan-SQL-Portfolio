@@ -288,7 +288,29 @@ AND NOT EXISTS (
 
 ```
 
+🔴 [ DELETE ] 
 
+- **Delete all departments from the department table that do not have any employees associated with them in the employee table.**
+
+**Tables:**
+
+- **department: (dept_id, dept_name, location)**
+- **employee: (emp_id, emp_name, dept_name, salary)**
+
+```sql
+
+DELETE FROM department
+WHERE dept_name IN (
+    SELECT d.dept_name
+    FROM department d
+    WHERE NOT EXISTS (
+        SELECT 1
+        FROM employee e
+        WHERE e.dept_name = d.dept_name -- No employees in this department
+    )
+);
+
+```
 
 
 
