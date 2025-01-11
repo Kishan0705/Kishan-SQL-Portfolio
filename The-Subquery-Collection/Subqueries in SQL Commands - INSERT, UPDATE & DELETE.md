@@ -341,6 +341,32 @@ AND e.dept_name IN (
 
 ```
 
+🔴 [ DELETE ] 
+
+- **Delete all departments from the department table that have no employees earning more than the average salary of their department.**
+
+**Tables:**
+
+- **department: (dept_id, dept_name, location)**
+- **employee: (emp_id, emp_name, dept_name, salary)**
+
+```sql
+
+DELETE FROM department d
+WHERE d.dept_name IN (
+    SELECT e.dept_name
+    FROM employee e
+    WHERE NOT EXISTS (
+        SELECT 1
+        FROM employee e1
+        WHERE e1.dept_name = e.dept_name
+        AND e1.salary > (SELECT AVG(e2.salary) FROM employee e2 WHERE e2.dept_name = e.dept_name)
+    )
+);
+
+```
+
+
 
 
 
