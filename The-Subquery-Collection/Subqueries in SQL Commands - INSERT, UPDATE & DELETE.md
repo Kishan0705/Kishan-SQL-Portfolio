@@ -312,7 +312,34 @@ WHERE dept_name IN (
 
 ```
 
+🔴 [ DELETE ] 
 
+- **Delete all employees from the employee table who work in departments where the average salary is less than a given threshold (e.g., $50,000).**
+
+**Tables** 
+
+- **employee: (emp_id, emp_name, dept_name, salary)**
+- **department: (dept_id, dept_name, location)**
+
+```sql
+
+DELETE FROM employee e
+WHERE e.salary < (
+    SELECT AVG(e1.salary)
+    FROM employee e1
+    WHERE e1.dept_name = e.dept_name
+) 
+AND e.dept_name IN (
+    SELECT d.dept_name
+    FROM department d
+    WHERE (
+        SELECT AVG(e1.salary)
+        FROM employee e1
+        WHERE e1.dept_name = d.dept_name
+    ) < 50000 
+);
+
+```
 
 
 
