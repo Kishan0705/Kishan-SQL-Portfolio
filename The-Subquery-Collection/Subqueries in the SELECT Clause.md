@@ -1,3 +1,6 @@
+
+## Subqueries in the SELECT Clause
+
 - **List each employee’s details along with their department’s average salary.**
 
 **Table :**
