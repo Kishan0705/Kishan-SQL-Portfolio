@@ -204,7 +204,30 @@ AND emp_id IN (
 
 ```
 
+🟡 [ UPDATE ] 
 
+- **Update the department location for all employees who have not received a promotion. Move them to the "General" department. The update should only affect employees who are currently in the employee_history table and have been with the company for more than 3 years.**
+
+- Tables:
+
+**employee: (emp_id, emp_name, dept_name, location)**
+
+**promotions: (emp_id, promotion_date)**
+
+**employee_history: (emp_id, emp_name, dept_name, hire_date)**
+
+```sql
+
+UPDATE employee_history eh
+SET dept_name = 'General'
+WHERE eh.hire_date <= CURRENT_DATE - INTERVAL '3 years' 
+AND NOT EXISTS (
+    SELECT 1 
+    FROM promotions p 
+    WHERE p.emp_id = eh.emp_id 
+);
+
+```
 
 
 
