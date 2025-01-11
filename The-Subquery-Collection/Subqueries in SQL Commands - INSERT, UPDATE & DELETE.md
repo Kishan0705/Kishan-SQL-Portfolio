@@ -306,7 +306,7 @@ WHERE dept_name IN (
     WHERE NOT EXISTS (
         SELECT 1
         FROM employee e
-        WHERE e.dept_name = d.dept_name -- No employees in this department
+        WHERE e.dept_name = d.dept_name 
     )
 );
 
