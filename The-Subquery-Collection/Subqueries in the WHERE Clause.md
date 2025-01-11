@@ -97,3 +97,31 @@ WHERE e.Salary >
       WHERE e1.DepartmentID = e.DepartmentID );
 
 ```
+
+- **Calculate the total salary for each department while excluding the top earner in that department.**
+
+**Table:**
+
+- **employee: (emp_id, emp_name, dept_name, salary)**
+
+```sql
+
+SELECT dept_name, SUM(salary) AS total_salary_excluding_top
+FROM employee e
+WHERE emp_id NOT IN (
+    SELECT emp_id
+    FROM employee e1
+    WHERE e1.salary = (
+        SELECT MAX(salary)
+        FROM employee e2
+        WHERE e2.dept_name = e1.dept_name
+    )
+)
+GROUP BY dept_name;
+
+```
+
+
+
+
+
