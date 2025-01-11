@@ -262,6 +262,41 @@ AND NOT EXISTS (
 
 ```
 
+🔴 [ DELETE ] 
+
+- **Delete all employees from the employee table who are not present in the employee_history table and whose salaries are below the average salary of their department.**
+
+- Tables :
+
+**employee: (emp_id, emp_name, dept_name, salary)**
+
+**employee_history: (emp_id, emp_name, dept_name, hire_date)**
+
+```sql
+
+DELETE FROM employee e
+WHERE e.salary < (
+    SELECT AVG(e1.salary)
+    FROM employee e1
+    WHERE e1.dept_name = e.dept_name 
+)
+AND NOT EXISTS (
+    SELECT 1
+    FROM employee_history eh
+    WHERE eh.emp_id = e.emp_id 
+);
+
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
