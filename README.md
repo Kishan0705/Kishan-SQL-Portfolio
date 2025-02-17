@@ -40,7 +40,7 @@
 
 2. Leetcode
 
-3. Hackerrank
+3. [Hackerrank](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main/Hacker_Rank_Solutions)
 
 4. Stratascratch
 
