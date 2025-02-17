@@ -11,7 +11,7 @@
 4. [**Solutions by Platforms**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#-solutions-by-platforms)  
 5. [**Query Solutions from YouTube Channels**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#--query-solutions-from-youtube-channels)  
 6. [**SQL Certifications**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#%EF%B8%8F-sql-certifications)
-7. [**License**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LICENSE)
+7. [**License**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#-license)
 
 ## 🔍 Overview  
 
@@ -29,11 +29,12 @@
 ## 🎖️ SQL Certifications 
 
 ## 📃 License 
-This repository is licensed under the MIT License. Please see the LICENSE file for more details.
+This repository is licensed under the MIT License. Please see the [LICENSE](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LICENSE
+) file for more details.
 
 ## 🤝 Support
 ## ⭐ If you found this repository helpful, inspiring, or if it sparked new ideas, don't forget to star it!
-- I hope these resources help with your SQL learning and applications. If you have any questions or feedback, feel free to connect with me on LinkedIn. 🙌
+- I hope these resources help with your SQL learning and applications. If you have any questions or feedback, feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/kishan-soni0705/). 🙌
 
 
 
