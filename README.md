@@ -5,13 +5,13 @@
 
 ## 📌 Portfolio Sections  
 
-1. **Overview**  
-2. **Case Studies**  
-3. **Projects**  
-4. **Solutions by Platforms**  
-5. **Query Solutions from YouTube Channels**  
-6. **SQL Certifications**
-7. **License**
+1. [**Overview**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#-overview)
+2. [**Case Studies**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#-case-studies-business-scenarios-8-week-sql-challenge--more)  
+3. [**Projects**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#%EF%B8%8F--projects-hands-on-sql-applications) 
+4. [**Solutions by Platforms**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#-solutions-by-platforms)  
+5. [**Query Solutions from YouTube Channels**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#--query-solutions-from-youtube-channels)  
+6. [**SQL Certifications**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#%EF%B8%8F-sql-certifications)
+7. [**License**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LICENSE)
 
 ## 🔍 Overview  
 
