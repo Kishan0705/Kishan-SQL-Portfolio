@@ -30,11 +30,11 @@
 
 ## 🧩 Solutions by Platforms
 
-In this section, you'll find SQL problems and solutions sourced from 7 distinct platforms, each neatly organized into separate directories.  
+**In this section, you'll find SQL problems and solutions sourced from 7 distinct platforms, each neatly organized into separate directories.**  
 
-Within each platform's directory, the problems are further categorized by difficulty levels: **easy**, **medium**, and **hard** 📝  
+**Within each platform's directory, the problems are further categorized by difficulty levels: **easy**, **medium**, and **hard** 📝**  
 
-- The platforms featured are:
+- **The platforms featured are:**
 
 1. DataLemur
 
