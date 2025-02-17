@@ -23,12 +23,13 @@
 
  This portfolio is a showcase of my SQL expertise, featuring real-world **case studies** , **projects** demonstrating hands-on SQL applications, and **platform-based solutions** tackling challenges from LeetCode, StrataScratch, and more. I’ve also curated **query solutions from top YouTube channels** to refine my problem-solving approach and included my **SQL certifications** as proof of my expertise. Every section reflects my passion for SQL and its practical applications.
 ### So dive in and explore!!!  
+╰┈➤
 
 ## 🧠 Case Studies (Business Scenarios, 8-Week SQL Challenge & More)  
 
 ## ⚙️  Projects (Hands-on SQL Applications)
 
-## 🧩 Solutions by Platforms
+## 💡 Solutions by Platforms
 
 **In this section, you'll find SQL problems and solutions sourced from 7 distinct platforms, each neatly organized into separate directories.**  
 
