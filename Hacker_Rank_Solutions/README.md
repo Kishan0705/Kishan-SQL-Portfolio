@@ -67,6 +67,11 @@ In the below table, the columns indicate the following attributes related to the
 
 ## Aggregation 
 
+| ID  | Challenges                                | Difficulty | Solutions                                                                                                                         |
+| --- | ----------------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | [Weather Observation Station 2](https://www.hackerrank.com/challenges/weather-observation-station-2/problem?isFullScreen=true) | 🟢 Easy     | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/Hacker_Rank_Solutions/03%20-%20Aggregation/Weather%20Observation%20Station%202.md#-1-) |
+
+
 ## Basic Join 
 
 ## Advanced Join 
