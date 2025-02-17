@@ -65,7 +65,7 @@ In the below table, the columns indicate the following attributes related to the
 | 4   | [Binary Tree Nodes](https://www.hackerrank.com/challenges/binary-search-tree-1/problem?isFullScreen=true) | 🟡 Medium     | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/b6509f80eecab762e73e0846655161a285fa1ab7/Hacker_Rank_Solutions/02%20-%20Advanced%20Select/4%20-%20Binary%20Tree%20Nodes.md) |
 | 5   | [New Companies](https://www.hackerrank.com/challenges/the-company/problem?isFullScreen=true) | 🟡 Medium     | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/4dff0a4dbdf8cc1c99f7c01cacd87712ad1bb71c/Hacker_Rank_Solutions/02%20-%20Advanced%20Select/5%20-%20New%20Companies.md) |
 
-## Aggregation 
+## 3. Aggregation 
 
 | ID  | Challenges                                | Difficulty | Solutions                                                                                                                         |
 | --- | ----------------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------- |
