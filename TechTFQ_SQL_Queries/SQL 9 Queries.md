@@ -12,6 +12,8 @@ Note: Record is considered duplicate if a user name is present more than once.
 
 ![image](https://github.com/user-attachments/assets/7e86d911-a359-47f7-b302-674bd8d446e2)
 
+***➜ Solution***
+
 💡 **Approach No: 1 [ Using CTEs ]**
 
 ```sql
@@ -37,3 +39,29 @@ from users u
 order by user_id) x
 where x.rn <> 1;
 ```
+
+## 2️⃣ Write a SQL query to fetch the second last record from employee table.
+
+👉 **Approach: Using window function sort the data in descending order based on employee id. Provide a row number to each of the record and fetch the record having row number as 2.**
+
+*Table Name: EMPLOYEE*
+
+![image](https://github.com/user-attachments/assets/20bc8c08-7f43-4172-8569-4ce97a2e575b)
+
+***➜ Solution***
+
+```sql
+select emp_id, emp_name, dept_name, salary
+from (
+select *,
+row_number() over (order by emp_id desc) as rn
+from employee e) x
+where x.rn = 2;
+```
+
+
+
+
+
+
+
