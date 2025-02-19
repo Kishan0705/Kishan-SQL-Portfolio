@@ -2,7 +2,7 @@
 
 ## I have listed below 9 SQL Queries which should help you to practice intermediate to complex SQL queries.  
 
-## 1️⃣ Write a SQL Query to fetch all the duplicate records in a table.
+## [ 1 ]  Write a SQL Query to fetch all the duplicate records in a table.
 
 Note: Record is considered duplicate if a user name is present more than once.
 
@@ -10,7 +10,21 @@ Note: Record is considered duplicate if a user name is present more than once.
 
 *Table Name: USERS*
 
-![image](https://github.com/user-attachments/assets/7e86d911-a359-47f7-b302-674bd8d446e2)
+```sql
+drop table users;
+create table users
+(
+user_id int primary key,
+user_name varchar(30) not null,
+email varchar(50));
+
+insert into users values
+(1, 'Sumit', 'sumit@gmail.com'),
+(2, 'Reshma', 'reshma@gmail.com'),
+(3, 'Farhana', 'farhana@gmail.com'),
+(4, 'Robin', 'robin@gmail.com'),
+(5, 'Robin', 'robin@gmail.com');
+```
 
 ***➜ Solution***
 
@@ -40,14 +54,47 @@ order by user_id) x
 where x.rn <> 1;
 ```
 
-## 2️⃣ Write a SQL query to fetch the second last record from employee table.
+## [ 2 ]  Write a SQL query to fetch the second last record from employee table.
 
 👉 **Approach: Using window function sort the data in descending order based on employee id. Provide a row number to each of the record and fetch the record having row number as 2.**
 
 *Table Name: EMPLOYEE*
 
-![image](https://github.com/user-attachments/assets/20bc8c08-7f43-4172-8569-4ce97a2e575b)
+```sql
+--Tables Structure:
 
+drop table employee;
+create table employee
+( emp_ID int primary key
+, emp_NAME varchar(50) not null
+, DEPT_NAME varchar(50)
+, SALARY int);
+
+insert into employee values(101, 'Mohan', 'Admin', 4000);
+insert into employee values(102, 'Rajkumar', 'HR', 3000);
+insert into employee values(103, 'Akbar', 'IT', 4000);
+insert into employee values(104, 'Dorvin', 'Finance', 6500);
+insert into employee values(105, 'Rohit', 'HR', 3000);
+insert into employee values(106, 'Rajesh',  'Finance', 5000);
+insert into employee values(107, 'Preet', 'HR', 7000);
+insert into employee values(108, 'Maryam', 'Admin', 4000);
+insert into employee values(109, 'Sanjay', 'IT', 6500);
+insert into employee values(110, 'Vasudha', 'IT', 7000);
+insert into employee values(111, 'Melinda', 'IT', 8000);
+insert into employee values(112, 'Komal', 'IT', 10000);
+insert into employee values(113, 'Gautham', 'Admin', 2000);
+insert into employee values(114, 'Manisha', 'HR', 3000);
+insert into employee values(115, 'Chandni', 'IT', 4500);
+insert into employee values(116, 'Satya', 'Finance', 6500);
+insert into employee values(117, 'Adarsh', 'HR', 3500);
+insert into employee values(118, 'Tejaswi', 'Finance', 5500);
+insert into employee values(119, 'Cory', 'HR', 8000);
+insert into employee values(120, 'Monica', 'Admin', 5000);
+insert into employee values(121, 'Rosalin', 'IT', 6000);
+insert into employee values(122, 'Ibrahim', 'IT', 8000);
+insert into employee values(123, 'Vikram', 'IT', 8000);
+insert into employee values(124, 'Dheeraj', 'IT', 11000);
+```
 ***➜ Solution***
 
 ```sql
@@ -58,6 +105,276 @@ row_number() over (order by emp_id desc) as rn
 from employee e) x
 where x.rn = 2;
 ```
+
+## [ 3 ] Write a SQL query to display only the details of employees who either earn the highest salary or the lowest salary in each department from the employee table.
+
+👉 **Approach: Write a sub query which will partition the data based on each department and then identify the record with maximum and minimum salary for each of the partitioned department. Finally, from the main query fetch only the data which matches the maximum and minimum salary returned from the sub query.**
+
+```sql
+
+drop table employee;
+create table employee
+( emp_ID int primary key
+, emp_NAME varchar(50) not null
+, DEPT_NAME varchar(50)
+, SALARY int);
+
+insert into employee values(101, 'Mohan', 'Admin', 4000);
+insert into employee values(102, 'Rajkumar', 'HR', 3000);
+insert into employee values(103, 'Akbar', 'IT', 4000);
+insert into employee values(104, 'Dorvin', 'Finance', 6500);
+insert into employee values(105, 'Rohit', 'HR', 3000);
+insert into employee values(106, 'Rajesh',  'Finance', 5000);
+insert into employee values(107, 'Preet', 'HR', 7000);
+insert into employee values(108, 'Maryam', 'Admin', 4000);
+insert into employee values(109, 'Sanjay', 'IT', 6500);
+insert into employee values(110, 'Vasudha', 'IT', 7000);
+insert into employee values(111, 'Melinda', 'IT', 8000);
+insert into employee values(112, 'Komal', 'IT', 10000);
+insert into employee values(113, 'Gautham', 'Admin', 2000);
+insert into employee values(114, 'Manisha', 'HR', 3000);
+insert into employee values(115, 'Chandni', 'IT', 4500);
+insert into employee values(116, 'Satya', 'Finance', 6500);
+insert into employee values(117, 'Adarsh', 'HR', 3500);
+insert into employee values(118, 'Tejaswi', 'Finance', 5500);
+insert into employee values(119, 'Cory', 'HR', 8000);
+insert into employee values(120, 'Monica', 'Admin', 5000);
+insert into employee values(121, 'Rosalin', 'IT', 6000);
+insert into employee values(122, 'Ibrahim', 'IT', 8000);
+insert into employee values(123, 'Vikram', 'IT', 8000);
+insert into employee values(124, 'Dheeraj', 'IT', 11000);
+```
+
+***➜ Solution***
+
+```sql
+
+-- 1 Way ( using JOIN Subquery)
+
+SELECT x.*  
+FROM employee e  
+JOIN (  
+    SELECT *,  
+           MAX(salary) OVER (PARTITION BY dept_name) AS max_salary,  
+           MIN(salary) OVER (PARTITION BY dept_name) AS min_salary  
+    FROM employee  
+) x  
+ON e.emp_id = x.emp_id  
+AND (e.salary = x.max_salary OR e.salary = x.min_salary)  
+ORDER BY x.dept_name, x.salary;  
+
+-- 2 Way ( Usinf CTE )
+
+WITH cte AS (
+    SELECT *,
+           MIN(salary) OVER (PARTITION BY dept_name) AS min_sal,
+           MAX(salary) OVER (PARTITION BY dept_name) AS max_sal
+    FROM employee
+)
+SELECT emp_id, emp_name, dept_name, salary
+FROM cte
+WHERE salary = min_sal OR salary = max_sal
+ORDER BY dept_name, salary;
+
+```
+
+## [ 4 ] From the doctors table, fetch the details of doctors who work in the same hospital but in different specialty.
+
+**👉 Approach: Use self join to solve this problem. Self join is when you join a table to itself.**
+
+**Additional Query: Write SQL query to fetch the doctors who work in same hospital irrespective of their specialty.**
+
+```sql
+--Table Structure:
+
+drop table doctors;
+create table doctors
+(
+id int primary key,
+name varchar(50) not null,
+speciality varchar(100),
+hospital varchar(50),
+city varchar(50),
+consultation_fee int
+);
+
+insert into doctors values
+(1, 'Dr. Shashank', 'Ayurveda', 'Apollo Hospital', 'Bangalore', 2500),
+(2, 'Dr. Abdul', 'Homeopathy', 'Fortis Hospital', 'Bangalore', 2000),
+(3, 'Dr. Shwetha', 'Homeopathy', 'KMC Hospital', 'Manipal', 1000),
+(4, 'Dr. Murphy', 'Dermatology', 'KMC Hospital', 'Manipal', 1500),
+(5, 'Dr. Farhana', 'Physician', 'Gleneagles Hospital', 'Bangalore', 1700),
+(6, 'Dr. Maryam', 'Physician', 'Gleneagles Hospital', 'Bangalore', 1500);
+```
+***➜ Solution***
+
+```sql
+
+select d1.name, d1.speciality,d1.hospital
+from doctors d1
+join doctors d2
+on d1.hospital = d2.hospital and d1.speciality <> d2.speciality
+and d1.id <> d2.id;
+
+-- Alternative Question solution 
+
+select d1.name, d1.speciality,d1.hospital
+from doctors d1
+join doctors d2
+on d1.hospital = d2.hospital
+and d1.id <> d2.id;
+
+```
+
+## [ 5 ] From the login_details table, fetch the users who logged in consecutively 3 or more times.
+
+**👉 We need to fetch users who have appeared 3 or more times consecutively in login details table. There is a window function which can be used to fetch data from the following record. Use that window function to compare the user name in current row with user name in the next row and in the row following the next row. If it matches then fetch those records.**
+
+```sql
+--Table Structure:
+
+drop table login_details;
+create table login_details(
+login_id int primary key,
+user_name varchar(50) not null,
+login_date date);
+
+delete from login_details;
+insert into login_details values
+(101, 'Michael', current_date),
+(102, 'James', current_date),
+(103, 'Stewart', current_date+1),
+(104, 'Stewart', current_date+1),
+(105, 'Stewart', current_date+1),
+(106, 'Michael', current_date+2),
+(107, 'Michael', current_date+2),
+(108, 'Stewart', current_date+3),
+(109, 'Stewart', current_date+3),
+(110, 'James', current_date+4),
+(111, 'James', current_date+4),
+(112, 'James', current_date+5),
+(113, 'James', current_date+6);
+```
+
+***➜ Solution***
+
+```sql
+select 
+	distinct X.repeatitive_name
+	from ( 
+select 
+*,
+case 
+    when user_name = lead(user_name) over ( order by login_id ) AND
+     user_name = lead(user_name,2) over ( order by login_id )
+then user_name 
+else NULL
+end as repeatitive_name
+from login_details ) X
+where X.repeatitive_name is not null;
+
+```
+
+## [ 6 ] From the students table, write a SQL query to interchange the adjacent student names.
+
+**👉Assuming id will be a sequential number always. If id is an odd number then fetch the student name from the following record. If id is an even number then fetch the student name from the preceding record. Try to figure out the window function which can be used to fetch the preceding the following record data.**
+
+**If the last record is an odd number then it wont have any adjacent even number hence figure out a way to not interchange the last record data.**
+
+```sql
+--Table Structure:
+
+drop table students;
+create table students
+(
+id int primary key,
+student_name varchar(50) not null
+);
+insert into students values
+(1, 'James'),
+(2, 'Michael'),
+(3, 'George'),
+(4, 'Stewart'),
+(5, 'Robin');
+```
+
+***➜ Solution***
+
+```sql
+SELECT 
+    id,
+    student_name,
+    CASE 
+        WHEN id % 2 <> 0 
+            THEN LEAD(student_name, 1, student_name) OVER (ORDER BY id)
+        WHEN id % 2 = 0 
+            THEN LAG(student_name) OVER (ORDER BY id)
+    END AS new_student_name
+FROM students;
+```
+
+## [ 7 ] From the weather table, fetch all the records when London had extremely cold temperature for 3 consecutive days or more.
+
+**👉First using a sub query identify all the records where the temperature was very cold and then use a main query to fetch only the records returned as very cold from the sub query. You will not only need to compare the records following the current row but also need to compare the records preceding the current row. And may also need to compare rows preceding and following the current row. Identify a window function which can do this comparison pretty easily.**
+
+```sql
+--Table Structure:
+
+drop table weather;
+create table weather
+(
+id int,
+city varchar(50),
+temperature int,
+day date
+);
+delete from weather;
+insert into weather values
+(1, 'London', -1, to_date('2021-01-01','yyyy-mm-dd')),
+(2, 'London', -2, to_date('2021-01-02','yyyy-mm-dd')),
+(3, 'London', 4, to_date('2021-01-03','yyyy-mm-dd')),
+(4, 'London', 1, to_date('2021-01-04','yyyy-mm-dd')),
+(5, 'London', -2, to_date('2021-01-05','yyyy-mm-dd')),
+(6, 'London', -5, to_date('2021-01-06','yyyy-mm-dd')),
+(7, 'London', -7, to_date('2021-01-07','yyyy-mm-dd')),
+(8, 'London', 5, to_date('2021-01-08','yyyy-mm-dd'));
+
+```
+
+***➜ Solution***
+
+```sql
+SELECT id, city, temperature, day
+FROM (
+    SELECT *,
+        CASE 
+            WHEN temperature < 0 
+                 AND LEAD(temperature) OVER (ORDER BY day) < 0
+                 AND LEAD(temperature, 2) OVER (ORDER BY day) < 0 
+            THEN 'Y'
+            
+            WHEN temperature < 0 
+                 AND LEAD(temperature) OVER (ORDER BY day) < 0
+                 AND LAG(temperature) OVER (ORDER BY day) < 0 
+            THEN 'Y'
+            
+            WHEN temperature < 0 
+                 AND LAG(temperature) OVER (ORDER BY day) < 0
+                 AND LAG(temperature, 2) OVER (ORDER BY day) < 0 
+            THEN 'Y'
+            
+            ELSE NULL 
+        END AS flag
+    FROM weather
+) x
+WHERE x.flag = 'Y'
+ORDER BY day;
+```
+
+
+
+
+
 
 
 
