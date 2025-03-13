@@ -273,6 +273,26 @@ end as repeatitive_name
 from login_details ) X
 where X.repeatitive_name is not null;
 
+# Another Approach
+
+WITH login_rank AS (
+    SELECT 
+        *,
+        DENSE_RANK() OVER (PARTITION BY user_name ORDER BY login_date) AS rnk
+    FROM login_details
+),
+streaks_group AS (
+    SELECT 
+        *,
+       (login_date - INTERVAL '1 day' * rnk) AS streaks  
+    FROM login_rank
+)
+SELECT 
+    user_name
+FROM streaks_group
+GROUP BY user_name, streaks
+HAVING COUNT(*) >= 3;
+
 ```
 
 ## [ 6 ] From the students table, write a SQL query to interchange the adjacent student names.
