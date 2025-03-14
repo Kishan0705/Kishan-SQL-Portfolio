@@ -38,7 +38,7 @@ insert into cars values (6, 'Ioniq 5', 'Hyundai', 'Green', 2021);
 
 ```
 
-* **Solution Number : 1 ( Using Unique Idenifier) { when 2 Duplicate values are found }**
+* **Solution Number : 1 ( Using Unique Idenifier)**
 
 ``` sql
 
