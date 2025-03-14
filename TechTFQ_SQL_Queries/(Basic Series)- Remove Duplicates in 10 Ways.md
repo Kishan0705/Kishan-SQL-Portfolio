@@ -196,6 +196,27 @@ select * from cars_bkp;
 
 ```
 
+# Scenario 2: Data duplicated based on ALL of the columns
+
+* **Solution Number 7 : Delete using CTID (in PostgreSQL) / ROWID (in Oracle)**
+
+**This solution is applicable just for PostgreSQL & Oracle**
+
+```sql
+
+delete from cars
+where ctid in ( select max(ctid)
+                from cars
+                group by model, brand
+                having count(1) > 1);
+
+```
+
+**
+
+
+
+
 
 
 
