@@ -1,219 +1,202 @@
 # How to remove Duplicate Data in SQL
 
-#### **10 different ways to remove duplicate records in SQL. We look at 2 different scenario for duplicate records in a table and then come up with 10 SQL queries to remove these duplicate data from the database.**
+---
 
-*-> Data can be consider as duplicate if all column values are duplicated*
-
-* *if all column values are duplicated*
-
-**or**
-
-* *if only some of the column values are duplicated.*
-
-## Here you will find solution to remove duplicate data for both these scenarios. 
-
-# Scenario 1: Data duplicated based on SOME of the columns 
-
-### Requirement: Delete duplicate data from cars table. Duplicate record is identified based on the model and brand name.
-
-**Table Structure**
+ ## **➟ [ 1 ] : ROW_NUMBER() with CTE**  
+ 
+   Best for **large datasets** & **optimized performance**  
 
 ```sql
-
-drop table if exists cars;
-create table if not exists cars
-(
-    id      int,
-    model   varchar(50),
-    brand   varchar(40),
-    color   varchar(30),
-    make    int
+WITH cte AS (  
+    SELECT  
+        id,  
+        ROW_NUMBER() OVER (PARTITION BY name, age, grade ORDER BY id) AS rnk  
+    FROM Students  
+)  
+DELETE FROM Students  
+WHERE id IN (  
+    SELECT id FROM cte WHERE rnk > 1  
 );
-insert into cars values (1, 'Model S', 'Tesla', 'Blue', 2018);
-insert into cars values (2, 'EQS', 'Mercedes-Benz', 'Black', 2022);
-insert into cars values (3, 'iX', 'BMW', 'Red', 2022); 
-insert into cars values (4, 'Ioniq 5', 'Hyundai', 'White', 2021);
-insert into cars values (5, 'Model S', 'Tesla', 'Silver', 2018);
-insert into cars values (6, 'Ioniq 5', 'Hyundai', 'Green', 2021);
+```
+1️⃣ We use **ROW_NUMBER()** to assign a unique number to each record within the same group (`name, age, grade`).  
 
+2️⃣ The **first occurrence** of each group gets `ROW_NUMBER() = 1`, and duplicates get `ROW_NUMBER() > 1`.  
+
+3️⃣ A **CTE (Common Table Expression)** stores this result temporarily.  
+
+4️⃣ Finally, we **delete all records** where `ROW_NUMBER() > 1`, keeping only the first occurrence.  
+
+-> This method is **fast, scalable, and works well for large datasets!**  
+
+---
+
+ ## **➟ [ 2 ] : Self-Join Approach**  
+
+```sql
+DELETE s1  
+FROM Students s1  
+JOIN Students s2  
+ON s1.name = s2.name  
+AND s1.age = s2.age  
+AND s1.grade = s2.grade  
+WHERE s1.id > s2.id;
 ```
 
-* **Solution Number : 1 ( Using Unique Idenifier) {We already knew that, if brand & model both have more then 1 similar value then
-it's duplicated}**
+---
 
-``` sql
+1️⃣ **Joins the table with itself** to find duplicate records.  
+2️⃣ **Matches records with the same** `name, age, grade`.  
+3️⃣ **Deletes records where `id > MIN(id)`**, keeping only the first occurrence.  
 
--- First of all check similar data in consicutive rows
+ **Universal method** → Works in **all SQL databases** without advanced functions!  
 
-select * from cars
-order by model, brand;
+---
 
--- check in how many rows these 2 columns data are the same
+ ## **➟ [ 3 ] : DELETE with EXISTS**  
 
-select
-model, brand, 
-count(*) as cnt 
-from cars 
-group by model, brand;
-
--- check which group has >1 similar data and find MAX onece to delete it 
-
-select
-model, brand, 
-max(id) as ids  
-from cars 
-group by model, brand
-having count(*) >1;
-
-
--- now delete those IDs 
-
-delete from cars 
-	where id in ( 
-select
-max(id) as ids  
-from cars 
-group by model, brand
-having count(*) >1)
-
-```
-
-* **Solution Number : 2 ( Using Self Join ) { when 2 Duplicate values are found }**
-
-``` sql
-
--- These 3 steps will remains the same as previous solution, because after executing those queries,
---- we will get an idea that how many duplicates are there
-
--- First of all check similar data in consicutive rows
--- check in how many rows these 2 columns data are the same
--- check which group has >1 similar data and find MAX onece to delete it
-
--- SELF JOIN solution
-
-delete from cars 
-	where id in (
-select 
-	c1.id
-from cars c 
-join cars c1 on c.model = c1.model and 
-                c.brand = c1.brand
-where c.id < c1.id
-	);
-
-```
-
-* **Solution Number : 3 ( Using Window Function) { Works with multiple duplicates }**
-
-``` sql
-delete from cars 
-	where id in (
-select X.id
-	from (
-select 
-*,
-row_number() over ( partition by model, brand ) as rnk 
-from cars ) X
-where X.rnk >1;
+```sql
+DELETE FROM Employees e1  
+WHERE EXISTS (  
+    SELECT 1  
+    FROM Employees e2  
+    WHERE e1.name = e2.name  
+    AND e1.salary = e2.salary  
+    AND e1.id > e2.id  
 );
 ```
 
-* **Solution 4 : Using MIN function. This deletes even multiple duplicate records.**
+---
 
-``` sql
+1️⃣ **Checks for duplicates** using a correlated subquery.  
+2️⃣ **If a duplicate exists**, the outer query deletes the extra record (`id > MIN(id)`).  
+3️⃣ **More optimized than a JOIN** in some databases because it stops searching once a match is found.  
 
--- first check that which Original IDs we want to keep as it is
+ **Efficient for large datasets** and works across **most SQL databases**!   
 
-select 
-model, brand, min(id)
-from cars 
-group by 
-model, brand
+---
 
--- Now delete all IDs which are not in these record
+ ## **➟ [ 4 ] : Backup & TRUNCATE Method**  
 
-delete from cars 
-where id not in ( 
-				select min(id)
-				from cars 
-				group by model, brand );
+```sql
+CREATE TABLE backup_employees AS  
+SELECT MIN(id) AS id, name, salary  
+FROM Employees  
+GROUP BY name, salary;  
 
+TRUNCATE TABLE Employees;  
+
+INSERT INTO Employees  
+SELECT * FROM backup_employees;  
+
+DROP TABLE backup_employees;
 ```
 
-* **Solution Number 5 : Using Backup Table**
+---
 
-**When to use: currently we are practicing with very less amount of data, so in the real time, if we need to delete thousands of records after identifying duplicate records, it will take much time to delete it. So, that's why we can also use this technique, Because this will only consider Data without any duplicate values in the backup table which eventually makes lesser time to execute the query**
+1️⃣ **Creates a backup table** with only **unique records** (`MIN(id)`).  
+2️⃣ **Truncates the original table** (fastest way to remove all data).  
+3️⃣ **Restores unique records** from the backup table.  
+4️⃣ **Drops the temporary backup table** after restoration.  
 
-**When to not use: This methods reqires to delete Original table which has duplicate values, so if we are working on some important projects in the company and this data being used by applications, then we shouldn't directly delete this table, if we are working on just testing data in the company then only use this approach** 
+ **Best for:**  
+ 
+✅ **Data safety** – Ensures a full backup before deletion.  
+✅ **Large datasets** – `TRUNCATE` is faster than `DELETE`.  
+✅ **Universal** – Works in all SQL databases.  
 
-``` sql
+---
 
--- create a Backup table, and here we have used 1=2 filter because we just want to get table structure with empty data
+ ## **➟ [ 5 ] : NOT IN with MIN(id) Method**
 
-create table  cars_bkp 
-as
-select * from cars where 1 = 2;
-
--- Then Insert Data Into Empty table
-
-insert into cars_bkp
-select * from cars 
-where id in (select min(id)
-			from cars 
-			group by model, brand);
-
--- Now drop an Original Table
-
-drop table cars;
-
--- Rename backup table
-
-alter table cars_bkp rename to cars;
-
+```sql
+DELETE FROM Orders  
+WHERE id NOT IN (  
+    SELECT MIN(id)  
+    FROM Orders  
+    GROUP BY item, order_date  
+);
 ```
 
-* **Solution Number 6 : Usng backup table without dropping the original table**
+---
 
-``` sql
+1️⃣ **Finds the smallest `id`** (`MIN(id)`) for each duplicate group (`item, order_date`).  
+2️⃣ **Deletes all other duplicate records** while keeping the first occurrence.  
+3️⃣ **Simple and effective** for smaller datasets.  
 
--- here everything will remains the same as previous query, just need to Truncate the table ( will delete just data not entire table structure )
--- & Insers the data from backup table to Orginal Table
+ **Best for:**  
+✅ **Clear and easy to understand** SQL syntax.  
+✅ **Works across all SQL databases (universal approach).**  
+✅ **Good for small to medium-sized datasets.**  
 
-create table  cars_bkp 
-as
-select * from cars where 1 = 2;
+⚠ **Caution:** `NOT IN` can be slower on large datasets. Consider using `JOIN` or `EXISTS` for better performance.  
 
-insert into cars_bkp
-select * from cars 
-where id in (select min(id)
-			from cars 
-			group by model, brand);
+---
 
 
-truncate table cars; 
-
-insert into cars 
-select * from cars_bkp; 
-
-```
 
 # Scenario 2: Data duplicated based on ALL of the columns
 
-* **Solution Number 7 : Delete using CTID (in PostgreSQL) / ROWID (in Oracle)**
+If **all row values are completely duplicate** (including `id`), then **normal methods won't work** because `id` alone **can't be used to identify duplicates**.  
 
-**This solution is applicable just for PostgreSQL & Oracle**
+### ✅ **Universal & Optimized Solution for Fully Duplicate Rows**  
+1️⃣ **Use `GROUP BY` with `COUNT(*)` to identify duplicates**  
+2️⃣ **Use `ROW_NUMBER()` (if supported) or `SELF JOIN` to delete extra rows**  
 
+---
+
+### **🔹 ROW_NUMBER() Approach (Best for Large Datasets)**
 ```sql
-
-delete from cars
-where ctid in ( select max(ctid)
-                from cars
-                group by model, brand
-                having count(1) > 1);
-
+WITH cte AS (
+    SELECT *, ROW_NUMBER() OVER (PARTITION BY name, age, grade ORDER BY id) AS rnk  
+    FROM Students
+)  
+DELETE FROM Students  
+WHERE id IN (SELECT id FROM cte WHERE rnk > 1);
 ```
+✅ **Best Performance**  
+✅ **Works on large datasets**  
+❌ **Not in MySQL <8.0 & SQLite**  
 
-**
+---
+
+### **🔹 Universal Solution (Works in All RDBMS)**
+👉 **Self-Join to Delete Duplicate Rows Without Unique ID**
+```sql
+DELETE s1  
+FROM Students s1  
+JOIN Students s2  
+ON s1.name = s2.name  
+AND s1.age = s2.age  
+AND s1.grade = s2.grade  
+WHERE s1.id > s2.id;
+```
+✅ **Works in all databases**  
+✅ **Does not require ROW_NUMBER()**  
+❌ **Slightly less efficient than ROW_NUMBER()**  
+
+---
+
+### **🔹 Alternative: Create a New Table with DISTINCT Rows**  
+If deleting duplicates is tricky, the safest method is **creating a clean table**:  
+```sql
+CREATE TABLE new_students AS  
+SELECT DISTINCT * FROM Students;  
+
+DROP TABLE Students;  
+
+ALTER TABLE new_students RENAME TO Students;
+```
+✅ **Guaranteed to remove duplicates**  
+✅ **Works everywhere**  
+❌ **Requires table recreation (not always feasible)**  
+
+---
+
+### **💡 Best Choice?**
+- **For large datasets → Use `ROW_NUMBER()` (if supported)**  
+- **For any RDBMS → Use Self-Join**  
+- **For guaranteed removal → Use `DISTINCT` and recreate the table**  
+
 
 
 
