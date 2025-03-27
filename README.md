@@ -1,6 +1,6 @@
 # </>  Kishan Soni - SQL Portfolio
 
-### Data is everywhere, but making sense of it is an art and that’s where SQL comes in. This portfolio is a showcase of my journey mastering SQL, solving real-world problems, and continuously pushing the boundaries of data exploration.
+### This portfolio is a showcase of my journey mastering SQL, solving real-world problems, and continuously pushing the boundaries of data exploration.
 
 
 ## 📌 Portfolio Sections  
