@@ -9,4 +9,5 @@ All queries were tested and executed in DataLemur’s **integrated PostgreSQL en
 ### 📝 NOTE: Referral Code  
 Unlock **bonus content** and **exclusive rewards** for BOTH of us by signing up and verifying your email using this **[referral code link](https://datalemur.com?referralCode=UPEPchfy)**.  
 
+[![Referral Code](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/Images/DL_RC.png?raw=true)](https://datalemur.com?referralCode=UPEPchfy)
 
