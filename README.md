@@ -37,7 +37,7 @@
 
 - **The platforms featured are:**
 
-1. DataLemur
+1. [DataLemur](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main/Data_Lemur_Solutions)
 
 2. Leetcode
 
