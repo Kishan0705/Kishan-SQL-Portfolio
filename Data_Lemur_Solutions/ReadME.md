@@ -33,15 +33,7 @@ The table below contains details of the **weekly SQL challenges**, including the
 
 ---
 
-
-| ID  | Challenges                                | Difficulty | Solutions  | Company Name |
-| --- | ----------------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-| 1   | [Histogram of Tweets](https://datalemur.com/questions/sql-histogram-tweets) | 🟢 Easy     | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/Data_Lemur_Solutions/Easy/Histogram_of%20_tweets.md#histogram-of-tweets) | X |
-| 2   | [Data Science Skills](https://datalemur.com/questions/matching-skills) | 🟢 Easy     | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/Data_Lemur_Solutions/Easy/Data_Science_Skills.md#data-science-skills) | LinkedIn |
-| 3   | [Page With No Likes](https://datalemur.com/questions/sql-page-with-no-likes) | 🟢 Easy     | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/Data_Lemur_Solutions/Easy/Page_With_No_Likes.md#problem-statement) | Facebook |
-| 4   | [Unfinished Parts](https://datalemur.com/questions/tesla-unfinished-parts) | 🟢 Easy     | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/Data_Lemur_Solutions/Easy/Unfinished_Parts.md#problem-statement) | Tesla |
-
-
+## Difficulty : Easy 🟢 (20/20)
 
 
 | ID  | Challenges                                | Solutions  | Company Name |
