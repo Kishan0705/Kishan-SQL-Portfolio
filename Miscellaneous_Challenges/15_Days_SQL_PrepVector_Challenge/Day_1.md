@@ -3,14 +3,14 @@
 
 ---
 
-## 🧠 Problem Statement
+##  Problem Statement
 You’re given two tables: `users` and `events`. The `events` table holds values of all of the user events in the `action` column (‘like’, ‘comment’, or ‘post’).
 
 Write a query to get the **percentage of users that have never liked or commented**, rounded to two decimal places.
 
 ---
 
-## 🗃️ Schema & Sample Data
+##  Schema & Sample Data
 ```sql
 CREATE TABLE users (
   user_id INT PRIMARY KEY,
@@ -54,7 +54,7 @@ INSERT INTO events (event_id, user_id, action, created_at) VALUES
 
 ---
 
-## ✅ My Solution
+##  My Solution
 ```sql
 WITH never AS ( 
     SELECT COUNT(*) AS never_liked_or_commented_users
@@ -77,7 +77,7 @@ CROSS JOIN all_user a;
 
 ---
 
-## 🌍 Solution from Others
+##  Solution from Others
 ```sql
 WITH num_likes_and_comments AS(
   SELECT
