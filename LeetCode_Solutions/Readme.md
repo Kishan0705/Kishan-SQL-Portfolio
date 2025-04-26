@@ -1,1 +1,36 @@
 [![Leetcode Stats](https://raw.githubusercontent.com/Kishan0705/Kishan-SQL-Portfolio/main/Images/Leetcode_ss.png)](https://leetcode.com/u/kishansoni07/)
+
+| ID | Challenges | Solution |
+|----|------------|----------|
+| 1 | [Combine 2 Tables](https://leetcode.com/problems/combine-two-tables/description/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Combine%202%20Tables.md) |
+| 2 | [Employees Earning More Then Their Managers](https://leetcode.com/problems/employees-earning-more-than-their-managers/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Employees%20Earning%20More%20Then%20Their%20Managers.md) |
+| 3 | [Duplicate Email](https://leetcode.com/problems/duplicate-emails/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Duplicate%20Email.md) |
+| 4 | [Customer Who Never Order](https://leetcode.com/problems/customers-who-never-order/description/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Customer%20Who%20Never%20Order.md) |
+| 5 | [Delete Duplicate Emails](https://leetcode.com/problems/delete-duplicate-emails/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Delete%20Duplicate%20Emails.md) |
+| 6 | [Rising Temperature](https://leetcode.com/problems/rising-temperature/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Rising%20Temperature.md) |
+| 7 | [Game Play Analysis I](https://leetcode.com/problems/game-play-analysis-i/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Game%20Play%20Analysis%20I.md) |
+| 8 | [Employee Bonus](https://leetcode.com/problems/employee-bonus/description/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Employee%20Bonus.md) |
+| 9 | [Find Customer Referee](https://leetcode.com/problems/find-customer-referee/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Find%20Customer%20Referee.md) |
+| 10 | [Customers Placing the Largest Number of Orders](https://leetcode.com/problems/customer-placing-the-largest-number-of-orders/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Customers%20Placing%20the%20Largest%20Number%20of%20Orders.md) |
+| 11 | [Big Countries](https://leetcode.com/problems/big-countries/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Big%20Countries.md) |
+| 12 | [Classes More Than 5 Students](https://leetcode.com/problems/classes-more-than-5-students/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Classes%20More%20Than%205%20Students.md) |
+| 13 | [Sales Person](https://leetcode.com/problems/sales-person/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Sales%20Person.md) |
+| 14 | [Triangle Judgement](https://leetcode.com/problems/triangle-judgement/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Triangle%20Judgement.md) |
+| 15 | [Biggest Single Number](https://leetcode.com/problems/biggest-single-number/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Biggest%20Single%20Number.md) |
+| 16 | [Not Boring Movie](https://leetcode.com/problems/not-boring-movies/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Not%20Boring%20Movie.md) |
+| 17 | [Swap Salary](https://leetcode.com/problems/swap-salary/description/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Swap%20Salary.md) |
+| 18 | [Actors and Directors Who Cooperate At Least 3 times](https://leetcode.com/problems/actors-and-directors-who-cooperated-at-least-three-times/description/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Actors%20and%20Directors%20Who%20Cooperate%20At%20Least%203%20times.md) |
+| 19 | [Product Sales Analysis I](https://leetcode.com/problems/product-sales-analysis-i/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Product%20Sales%20Analysis%20I.md) |
+| 20 | [Project Employees I](https://leetcode.com/problems/project-employees-i/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Project%20Employees%20I.md) |
+| 21 | [Sales Analysis III](https://leetcode.com/problems/sales-analysis-iii/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Sales%20Analysis%20III.md) |
+| 22 | [User Activity for the past 30 days I](https://leetcode.com/problems/user-activity-for-the-past-30-days-i/description/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/User%20Activity%20for%20the%20past%2030%20days%20I.md) |
+| 23 | [Article Views I](https://leetcode.com/problems/article-views-i/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Article%20Views%20I.md) |
+| 24 | [Reformat Department Table](https://leetcode.com/problems/reformat-department-table/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Reformat%20Department%20Table.md) |
+| 25 | [Queries Quality and Percentage](https://leetcode.com/problems/queries-quality-and-percentage/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Queries%20Quality%20and%20Percentage.md) |
+| 26 | [Average Selling Price](https://leetcode.com/problems/average-selling-price/description/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Average%20Selling%20Price.md) |
+| 27 | [Students and Examinations](https://leetcode.com/problems/students-and-examinations/description/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Students%20and%20Examinations.md) |
+| 28 | [List the Products Ordered in a Period](https://leetcode.com/problems/list-the-products-ordered-in-a-period/description/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/List%20the%20Products%20Ordered%20in%20a%20Period.md) |
+| 29 | [Replace Employee ID with Unique Identifier](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Replace%20Employee%20ID%20with%20Unique%20Identifier.md) |
+| 30 | [Top Travelers](https://leetcode.com/problems/top-travellers/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Top%20Travelers.md) |
+| 31 | [Group Sold Product By The Date](https://leetcode.com/problems/group-sold-products-by-the-date/) | [Solution](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/LeetCode_Solutions/Easy/Group%20Sold%20Product%20By%20The%20Date.md) |
+
