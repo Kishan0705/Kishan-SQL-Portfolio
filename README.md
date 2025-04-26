@@ -39,7 +39,7 @@
 
 1. [DataLemur](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main/Data_Lemur_Solutions)
 
-2. Leetcode
+2. [Leetcode](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main/LeetCode_Solutions)
 
 3. [Hackerrank](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main/Hacker_Rank_Solutions)
 
