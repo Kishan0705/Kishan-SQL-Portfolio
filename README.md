@@ -58,6 +58,25 @@
 
 ## 🎖️ SQL Certifications 
 
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+
+  <a href="https://www.hackerrank.com/certificates/iframe/a61418615d79" target="_blank">
+    <img src="Images/sql_basic certificate (1)_page-0001.jpg" alt="SQL Basic Certificate" width="300" />
+  </a>
+
+  <a href="https://www.hackerrank.com/certificates/8225a17f2c04" target="_blank">
+    <img src="Images/sql_intermediate certificate (1)_page-0001.jpg" alt="SQL Intermediate Certificate" width="300" />
+  </a>
+
+  <a href="https://www.hackerrank.com/certificates/ae3fac31fb9b" target="_blank">
+    <img src="Images/Hacker Rank Adv SQL Cert..png" alt="SQL Advanced Certificate" width="300" />
+  </a>
+
+  <a href="https://codebasics.io/certificate/CB-50-239187" target="_blank">
+    <img src="Images/CB-50-239187 (1)_page-0001.jpg" alt="Codebasics SQL Certificate" width="300" />
+  </a>
+
+</div>
 
 
 
