@@ -7,25 +7,21 @@
 
 1. [**Overview**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#-overview)
 
-2. [**Case Studies**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#-case-studies-business-scenarios-8-week-sql-challenge--more)  
+2. [**Projects**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#%EF%B8%8F--projects-hands-on-sql-applications) 
 
-3. [**Projects**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#%EF%B8%8F--projects-hands-on-sql-applications) 
-
-4. [**Solutions by Platforms**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#-solutions-by-platforms)
+3. [**Solutions by Platforms**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#-solutions-by-platforms)
   
-5. [**Query Solutions from YouTube Channels**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#--query-solutions-from-youtube-channels)  
+4. [**Query Solutions from YouTube Channels**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#--query-solutions-from-youtube-channels)  
 
-6. [**SQL Certifications**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#%EF%B8%8F-sql-certifications)
+5. [**SQL Certifications**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#%EF%B8%8F-sql-certifications)
 
-7. [**License**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#-license)
+6. [**License**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#-license)
 
 ## 🔍 Overview  
 
  This portfolio is a showcase of my SQL expertise, featuring real-world **case studies** , **projects** demonstrating hands-on SQL applications, and **platform-based solutions** tackling challenges from LeetCode, StrataScratch, and more. I’ve also curated **query solutions from top YouTube channels** to refine my problem-solving approach and included my **SQL certifications** as proof of my expertise. Every section reflects my passion for SQL and its practical applications.
 ### So dive in and explore!!!  
 ╰┈➤
-
-## 🧠 Case Studies (Business Scenarios, 8-Week SQL Challenge & More)  
 
 ## ⚙️  Projects (Hands-on SQL Applications)
 
