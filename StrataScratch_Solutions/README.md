@@ -1,7 +1,4 @@
-<p align="center">
-  <a href="https://platform.stratascratch.com/user/Kishansoni07" target="_blank">
-    <img src="Images/StrataScratch_Img.jpg" alt="StrataScratch Profile" width="300"/>
-  </a>
-</p>
+[![StrataScratch Profile](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/Images/StrataScratch_Img.jpg?raw=true)](https://platform.stratascratch.com/user/Kishansoni07)
+
 
 
