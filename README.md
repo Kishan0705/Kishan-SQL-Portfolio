@@ -25,6 +25,11 @@
 
 ## ⚙️  Projects (Hands-on SQL Applications)
 
+| ID | Project Name                            | Overview                                                                                                                                                                  | Skills                                                                                                                                            | Link                                                                                             |
+| -- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| 01 | Data Job Market Analysis (SQL + Python) | Explored job postings for **Data Analyst** roles to discover top-paying jobs, trending skills, demand by companies & month-wise job posting trends using real-world data. | SQL (Joins, Aggregations, Window Functions, CTEs), PostgreSQL, Python (Matplotlib, data visualization), Data storytelling, Data cleaning/analysis | [GitHub - Data Job Market Analysis](https://github.com/Kishan0705/SQL_Project_Data_Job_Analysis) |
+
+
 ## 💡 Solutions by Platforms
 
 **In this section, you'll find SQL problems and solutions sourced from 7 distinct platforms, each neatly organized into separate directories.**  
