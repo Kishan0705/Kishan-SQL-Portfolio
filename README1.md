@@ -6,12 +6,13 @@
 
 ## 📂 Portfolio Sections  
 
-- [**Overview**](#-overview)  
-- [Projects](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/README1.md)  
-- [**Solutions by Platforms**](#-solutions-by-platforms)  
-- [**SQL Certifications**](#-sql-certifications)  
-- [**License**](#-license)  
-- [**Support**](#-support)  
+- [Overview](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/README1.md#-overview)
+- [Projects](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/README1.md#%EF%B8%8F-projects-hands-on-sql-applications)
+- [Solutions by Platforms](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/README1.md#-solutions-by-platforms)
+- [SQL Certifications](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/README1.md#%EF%B8%8F-sql-certifications)
+- [License](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/README1.md#-license)
+- [Support](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/README1.md#-support)
+
 
 ---
 
