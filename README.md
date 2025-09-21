@@ -10,18 +10,16 @@
 2. [**Projects**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#%EF%B8%8F--projects-hands-on-sql-applications) 
 
 3. [**Solutions by Platforms**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#-solutions-by-platforms)
-  
-4. [**Query Solutions from YouTube Channels**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#--query-solutions-from-youtube-channels)  
 
-5. [**SQL Certifications**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#%EF%B8%8F-sql-certifications)
+4. [**SQL Certifications**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#%EF%B8%8F-sql-certifications)
 
-6. [**License**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#-license)
+5. [**License**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main#-license)
 
 ## 🔍 Overview  
 
  This portfolio is a showcase of my SQL expertise, featuring real-world **case studies** , **projects** demonstrating hands-on SQL applications, and **platform-based solutions** tackling challenges from LeetCode, StrataScratch, and more. I’ve also curated **query solutions from top YouTube channels** to refine my problem-solving approach and included my **SQL certifications** as proof of my expertise. Every section reflects my passion for SQL and its practical applications.
 ### So dive in and explore!!!  
-╰┈➤
+
 
 ## ⚙️  Projects (Hands-on SQL Applications)
 
@@ -32,7 +30,7 @@
 
 ## 💡 Solutions by Platforms
 
-**In this section, you'll find SQL problems and solutions sourced from 7 distinct platforms, each neatly organized into separate directories.**  
+**In this section, you'll find SQL problems and solutions sourced from distinct platforms, each neatly organized into separate directories.**  
 
 **Within each platform's directory, the problems are further categorized by difficulty levels: **easy**, **medium**, and **hard** 📝**  
 
@@ -44,18 +42,6 @@
 
 3. [Hackerrank](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main/Hacker_Rank_Solutions)
 
-4. Stratascratch
-
-5. Coding Ninjas
-
-6. Interview Bit
-
-7. Interview Query
-
-8. NamasteSQL by Ankit Bansal
-
-
-## ▷  Query Solutions from YouTube Channels
 
 ## 🎖️ SQL Certifications 
 
@@ -87,7 +73,9 @@ This repository is licensed under the MIT License. Please see the [LICENSE](http
 ) file for more details.
 
 ## 🤝 Support
-## ⭐ If you found this repository helpful, inspiring, or if it sparked new ideas, don't forget to star it!
+
+### ⭐ If you found this repository helpful, inspiring, or if it sparked new ideas, don't forget to star it!
+
 - I hope these resources help with your SQL learning and applications. If you have any questions or feedback, feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/kishan-soni0705/). 🙌
 
 
