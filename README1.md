@@ -6,24 +6,26 @@
 
 ## 📂 Portfolio Sections  
 
-- [Overview](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/README1.md#-overview)
-- [Projects](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/README1.md#%EF%B8%8F-projects-hands-on-sql-applications)
-- [Solutions by Platforms](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/README1.md#-solutions-by-platforms)
-- [SQL Certifications](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/README1.md#%EF%B8%8F-sql-certifications)
-- [License](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/README1.md#-license)
-- [Support](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/README1.md#-support)
+- [**Overview**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/README1.md#-overview)
+- [**Projects**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/README1.md#%EF%B8%8F-projects-hands-on-sql-applications)
+- [**Solutions by Platforms**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/README1.md#-solutions-by-platforms)
+- [**SQL Certifications**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/README1.md#%EF%B8%8F-sql-certifications)
+- [**License**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/README1.md#-license)
+- [**Support**](https://github.com/Kishan0705/Kishan-SQL-Portfolio/blob/main/README1.md#-support)
+
 
 
 ---
 
-## 🔍 Overview  
+## 🔍 Overview
 
-This portfolio highlights my **SQL expertise** through:  
-- Real-world **case studies & projects**  
-- Hands-on applications demonstrating **business-driven SQL problem solving**  
-- Platform-based solutions from **LeetCode, DataLemur, HackerRank** & more  
-- Curated query solutions inspired by top **YouTube educators**  
-- Verified **SQL certifications** as proof of knowledge and consistency  
+This portfolio highlights my SQL work through:  
+- **Case studies and projects** that I have personally worked on  
+- **Hands-on SQL practice**, solving different types of problems  
+- **Solutions from platforms** like LeetCode, DataLemur, HackerRank, and more  
+- **Query examples from YouTube tutorials** that I followed and implemented  
+- **SQL certifications** that verify my skills and learning progress
+ 
 
 Every section reflects my passion for SQL and its **practical applications in data analytics**.  
 
