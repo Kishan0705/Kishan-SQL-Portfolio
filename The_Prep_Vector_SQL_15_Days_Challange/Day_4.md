@@ -2,7 +2,7 @@
 ---
 
 # Day 4 of 15: The PrepVector SQL Challenge  
-**Approach Used:** `ROW_NUMBER()`, `LAST_VALUE()`, `CTE`, `Window Functions`
+**Approach Used:** `ROW_NUMBER()`, `LAST_VALUE()`, `CTE`, `LAST_VALUE & Frame Clause`
 
 ---
 
