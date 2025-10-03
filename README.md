@@ -49,7 +49,8 @@ Organized SQL problem-solving practice from multiple platforms, **structured by 
 **Explore solutions here:**  
 - [DataLemur](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main/Data_Lemur_Solutions)  
 - [LeetCode](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main/LeetCode_Solutions)  
-- [HackerRank](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main/Hacker_Rank_Solutions)  
+- [HackerRank](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main/Hacker_Rank_Solutions)
+- [The_Prep_Vector_SQL_15_Days_Challange](https://github.com/Kishan0705/Kishan-SQL-Portfolio/tree/main/The_Prep_Vector_SQL_15_Days_Challange#-about-this-challenge)
 
 ---
 
